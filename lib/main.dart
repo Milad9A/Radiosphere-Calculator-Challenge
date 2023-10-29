@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:radiosphere_calculator_challenge/features/calculator/bloc/calculator_bloc.dart';
+import 'package:radiosphere_calculator_challenge/features/calculator/presentation/pages/operation_selection_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'core/injection/injection_container.dart' as di;
 
-void main() => runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
+  runApp(const CalculatorApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CalculatorApp extends StatelessWidget {
+  const CalculatorApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+    return BlocProvider(
+      create: (context) => di.sl<CalculatorBloc>(),
+      child: const MaterialApp(
+        home: OperationSelectionPage(),
       ),
     );
   }
