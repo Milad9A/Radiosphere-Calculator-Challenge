@@ -11,6 +11,13 @@ class CalculatorState with _$CalculatorState {
     required List<double> operands,
   }) = _CalculatorState;
 
+  static const empty = CalculatorState(
+    status: CalculatorStatus.idle(),
+    selectedOperation: null,
+    currentOperandPosition: null,
+    operands: [],
+  );
+
   bool get canCalculate {
     if (selectedOperation == null) return false;
     return operands.length == selectedOperation!.operandsCount;
@@ -26,9 +33,10 @@ class CalculatorState with _$CalculatorState {
 class CalculatorStatus with _$CalculatorStatus {
   const CalculatorStatus._();
 
-  const factory CalculatorStatus.idle() = Idle;
-  const factory CalculatorStatus.inputting() = Inputting;
+  const factory CalculatorStatus.idle() = CalculatorIdle;
+  const factory CalculatorStatus.inputting() = CalculatorInputting;
   const factory CalculatorStatus.calculated({required double result}) =
-      Calculated;
-  const factory CalculatorStatus.error({required String message}) = Error;
+      CalculatorCalculated;
+  const factory CalculatorStatus.error({required String message}) =
+      CalculatorError;
 }

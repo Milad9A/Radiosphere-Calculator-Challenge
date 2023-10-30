@@ -12,12 +12,7 @@ part 'calculator_bloc.freezed.dart';
 class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
   CalculatorBloc({required CalculatorRepository repository})
       : _repository = repository,
-        super(CalculatorState(
-          status: const CalculatorStatus.idle(),
-          selectedOperation: null,
-          currentOperandPosition: null,
-          operands: List.empty(),
-        )) {
+        super(CalculatorState.empty) {
     on<CalculatorEvent>((events, emit) {
       events.map(
         operationSelected: (OperationSelected event) =>

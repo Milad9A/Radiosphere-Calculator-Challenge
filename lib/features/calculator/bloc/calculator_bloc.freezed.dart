@@ -896,26 +896,26 @@ mixin _$CalculatorStatus {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Idle value) idle,
-    required TResult Function(Inputting value) inputting,
-    required TResult Function(Calculated value) calculated,
-    required TResult Function(Error value) error,
+    required TResult Function(CalculatorIdle value) idle,
+    required TResult Function(CalculatorInputting value) inputting,
+    required TResult Function(CalculatorCalculated value) calculated,
+    required TResult Function(CalculatorError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Idle value)? idle,
-    TResult? Function(Inputting value)? inputting,
-    TResult? Function(Calculated value)? calculated,
-    TResult? Function(Error value)? error,
+    TResult? Function(CalculatorIdle value)? idle,
+    TResult? Function(CalculatorInputting value)? inputting,
+    TResult? Function(CalculatorCalculated value)? calculated,
+    TResult? Function(CalculatorError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Idle value)? idle,
-    TResult Function(Inputting value)? inputting,
-    TResult Function(Calculated value)? calculated,
-    TResult Function(Error value)? error,
+    TResult Function(CalculatorIdle value)? idle,
+    TResult Function(CalculatorInputting value)? inputting,
+    TResult Function(CalculatorCalculated value)? calculated,
+    TResult Function(CalculatorError value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -956,7 +956,7 @@ class __$$IdleImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$IdleImpl extends Idle {
+class _$IdleImpl extends CalculatorIdle {
   const _$IdleImpl() : super._();
 
   @override
@@ -1013,10 +1013,10 @@ class _$IdleImpl extends Idle {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Idle value) idle,
-    required TResult Function(Inputting value) inputting,
-    required TResult Function(Calculated value) calculated,
-    required TResult Function(Error value) error,
+    required TResult Function(CalculatorIdle value) idle,
+    required TResult Function(CalculatorInputting value) inputting,
+    required TResult Function(CalculatorCalculated value) calculated,
+    required TResult Function(CalculatorError value) error,
   }) {
     return idle(this);
   }
@@ -1024,10 +1024,10 @@ class _$IdleImpl extends Idle {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Idle value)? idle,
-    TResult? Function(Inputting value)? inputting,
-    TResult? Function(Calculated value)? calculated,
-    TResult? Function(Error value)? error,
+    TResult? Function(CalculatorIdle value)? idle,
+    TResult? Function(CalculatorInputting value)? inputting,
+    TResult? Function(CalculatorCalculated value)? calculated,
+    TResult? Function(CalculatorError value)? error,
   }) {
     return idle?.call(this);
   }
@@ -1035,10 +1035,10 @@ class _$IdleImpl extends Idle {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Idle value)? idle,
-    TResult Function(Inputting value)? inputting,
-    TResult Function(Calculated value)? calculated,
-    TResult Function(Error value)? error,
+    TResult Function(CalculatorIdle value)? idle,
+    TResult Function(CalculatorInputting value)? inputting,
+    TResult Function(CalculatorCalculated value)? calculated,
+    TResult Function(CalculatorError value)? error,
     required TResult orElse(),
   }) {
     if (idle != null) {
@@ -1048,9 +1048,9 @@ class _$IdleImpl extends Idle {
   }
 }
 
-abstract class Idle extends CalculatorStatus {
-  const factory Idle() = _$IdleImpl;
-  const Idle._() : super._();
+abstract class CalculatorIdle extends CalculatorStatus {
+  const factory CalculatorIdle() = _$IdleImpl;
+  const CalculatorIdle._() : super._();
 }
 
 /// @nodoc
@@ -1071,7 +1071,7 @@ class __$$InputtingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InputtingImpl extends Inputting {
+class _$InputtingImpl extends CalculatorInputting {
   const _$InputtingImpl() : super._();
 
   @override
@@ -1128,10 +1128,10 @@ class _$InputtingImpl extends Inputting {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Idle value) idle,
-    required TResult Function(Inputting value) inputting,
-    required TResult Function(Calculated value) calculated,
-    required TResult Function(Error value) error,
+    required TResult Function(CalculatorIdle value) idle,
+    required TResult Function(CalculatorInputting value) inputting,
+    required TResult Function(CalculatorCalculated value) calculated,
+    required TResult Function(CalculatorError value) error,
   }) {
     return inputting(this);
   }
@@ -1139,10 +1139,10 @@ class _$InputtingImpl extends Inputting {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Idle value)? idle,
-    TResult? Function(Inputting value)? inputting,
-    TResult? Function(Calculated value)? calculated,
-    TResult? Function(Error value)? error,
+    TResult? Function(CalculatorIdle value)? idle,
+    TResult? Function(CalculatorInputting value)? inputting,
+    TResult? Function(CalculatorCalculated value)? calculated,
+    TResult? Function(CalculatorError value)? error,
   }) {
     return inputting?.call(this);
   }
@@ -1150,10 +1150,10 @@ class _$InputtingImpl extends Inputting {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Idle value)? idle,
-    TResult Function(Inputting value)? inputting,
-    TResult Function(Calculated value)? calculated,
-    TResult Function(Error value)? error,
+    TResult Function(CalculatorIdle value)? idle,
+    TResult Function(CalculatorInputting value)? inputting,
+    TResult Function(CalculatorCalculated value)? calculated,
+    TResult Function(CalculatorError value)? error,
     required TResult orElse(),
   }) {
     if (inputting != null) {
@@ -1163,9 +1163,9 @@ class _$InputtingImpl extends Inputting {
   }
 }
 
-abstract class Inputting extends CalculatorStatus {
-  const factory Inputting() = _$InputtingImpl;
-  const Inputting._() : super._();
+abstract class CalculatorInputting extends CalculatorStatus {
+  const factory CalculatorInputting() = _$InputtingImpl;
+  const CalculatorInputting._() : super._();
 }
 
 /// @nodoc
@@ -1201,7 +1201,7 @@ class __$$CalculatedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CalculatedImpl extends Calculated {
+class _$CalculatedImpl extends CalculatorCalculated {
   const _$CalculatedImpl({required this.result}) : super._();
 
   @override
@@ -1269,10 +1269,10 @@ class _$CalculatedImpl extends Calculated {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Idle value) idle,
-    required TResult Function(Inputting value) inputting,
-    required TResult Function(Calculated value) calculated,
-    required TResult Function(Error value) error,
+    required TResult Function(CalculatorIdle value) idle,
+    required TResult Function(CalculatorInputting value) inputting,
+    required TResult Function(CalculatorCalculated value) calculated,
+    required TResult Function(CalculatorError value) error,
   }) {
     return calculated(this);
   }
@@ -1280,10 +1280,10 @@ class _$CalculatedImpl extends Calculated {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Idle value)? idle,
-    TResult? Function(Inputting value)? inputting,
-    TResult? Function(Calculated value)? calculated,
-    TResult? Function(Error value)? error,
+    TResult? Function(CalculatorIdle value)? idle,
+    TResult? Function(CalculatorInputting value)? inputting,
+    TResult? Function(CalculatorCalculated value)? calculated,
+    TResult? Function(CalculatorError value)? error,
   }) {
     return calculated?.call(this);
   }
@@ -1291,10 +1291,10 @@ class _$CalculatedImpl extends Calculated {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Idle value)? idle,
-    TResult Function(Inputting value)? inputting,
-    TResult Function(Calculated value)? calculated,
-    TResult Function(Error value)? error,
+    TResult Function(CalculatorIdle value)? idle,
+    TResult Function(CalculatorInputting value)? inputting,
+    TResult Function(CalculatorCalculated value)? calculated,
+    TResult Function(CalculatorError value)? error,
     required TResult orElse(),
   }) {
     if (calculated != null) {
@@ -1304,9 +1304,10 @@ class _$CalculatedImpl extends Calculated {
   }
 }
 
-abstract class Calculated extends CalculatorStatus {
-  const factory Calculated({required final double result}) = _$CalculatedImpl;
-  const Calculated._() : super._();
+abstract class CalculatorCalculated extends CalculatorStatus {
+  const factory CalculatorCalculated({required final double result}) =
+      _$CalculatedImpl;
+  const CalculatorCalculated._() : super._();
 
   double get result;
   @JsonKey(ignore: true)
@@ -1347,7 +1348,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl extends Error {
+class _$ErrorImpl extends CalculatorError {
   const _$ErrorImpl({required this.message}) : super._();
 
   @override
@@ -1415,10 +1416,10 @@ class _$ErrorImpl extends Error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Idle value) idle,
-    required TResult Function(Inputting value) inputting,
-    required TResult Function(Calculated value) calculated,
-    required TResult Function(Error value) error,
+    required TResult Function(CalculatorIdle value) idle,
+    required TResult Function(CalculatorInputting value) inputting,
+    required TResult Function(CalculatorCalculated value) calculated,
+    required TResult Function(CalculatorError value) error,
   }) {
     return error(this);
   }
@@ -1426,10 +1427,10 @@ class _$ErrorImpl extends Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Idle value)? idle,
-    TResult? Function(Inputting value)? inputting,
-    TResult? Function(Calculated value)? calculated,
-    TResult? Function(Error value)? error,
+    TResult? Function(CalculatorIdle value)? idle,
+    TResult? Function(CalculatorInputting value)? inputting,
+    TResult? Function(CalculatorCalculated value)? calculated,
+    TResult? Function(CalculatorError value)? error,
   }) {
     return error?.call(this);
   }
@@ -1437,10 +1438,10 @@ class _$ErrorImpl extends Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Idle value)? idle,
-    TResult Function(Inputting value)? inputting,
-    TResult Function(Calculated value)? calculated,
-    TResult Function(Error value)? error,
+    TResult Function(CalculatorIdle value)? idle,
+    TResult Function(CalculatorInputting value)? inputting,
+    TResult Function(CalculatorCalculated value)? calculated,
+    TResult Function(CalculatorError value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1450,9 +1451,9 @@ class _$ErrorImpl extends Error {
   }
 }
 
-abstract class Error extends CalculatorStatus {
-  const factory Error({required final String message}) = _$ErrorImpl;
-  const Error._() : super._();
+abstract class CalculatorError extends CalculatorStatus {
+  const factory CalculatorError({required final String message}) = _$ErrorImpl;
+  const CalculatorError._() : super._();
 
   String get message;
   @JsonKey(ignore: true)
