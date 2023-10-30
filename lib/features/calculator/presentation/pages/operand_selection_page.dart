@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:radiosphere_calculator_challenge/core/consts/regex_expressions.dart';
 import 'package:radiosphere_calculator_challenge/features/calculator/bloc/calculator_bloc.dart';
 import 'package:radiosphere_calculator_challenge/features/calculator/presentation/pages/result_page.dart';
 
@@ -113,7 +114,7 @@ class _OperandSelectionPageState extends State<OperandSelectionPage> {
                         const TextInputType.numberWithOptions(decimal: true),
                     inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.allow(
-                        RegExp(r'^-?(\d+)?\.?\d{0,2}'),
+                        RegexExpression.allowFloatingPointNumbers,
                       )
                     ],
                   ),

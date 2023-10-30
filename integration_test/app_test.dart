@@ -153,7 +153,7 @@ void main() async {
       await tester.pumpAndSettle();
 
       // Verify the error message on the ResultPage.
-      expect(find.text(ErrorMessages.cantFindSqrtOfNeg), findsOneWidget);
+      expect(find.text(ErrorMessage.cantFindSqrtOfNeg), findsOneWidget);
     });
 
     testWidgets('error handling when division by zero is attempted',
@@ -182,7 +182,7 @@ void main() async {
       await tester.pumpAndSettle();
 
       // Verify the error message on the ResultPage.
-      expect(find.text(ErrorMessages.cantDivideByZero), findsOneWidget);
+      expect(find.text(ErrorMessage.cantDivideByZero), findsOneWidget);
     });
   });
 }

@@ -940,24 +940,25 @@ class _$CalculatorStatusCopyWithImpl<$Res, $Val extends CalculatorStatus>
 }
 
 /// @nodoc
-abstract class _$$IdleImplCopyWith<$Res> {
-  factory _$$IdleImplCopyWith(
-          _$IdleImpl value, $Res Function(_$IdleImpl) then) =
-      __$$IdleImplCopyWithImpl<$Res>;
+abstract class _$$CalculatorIdleImplCopyWith<$Res> {
+  factory _$$CalculatorIdleImplCopyWith(_$CalculatorIdleImpl value,
+          $Res Function(_$CalculatorIdleImpl) then) =
+      __$$CalculatorIdleImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$IdleImplCopyWithImpl<$Res>
-    extends _$CalculatorStatusCopyWithImpl<$Res, _$IdleImpl>
-    implements _$$IdleImplCopyWith<$Res> {
-  __$$IdleImplCopyWithImpl(_$IdleImpl _value, $Res Function(_$IdleImpl) _then)
+class __$$CalculatorIdleImplCopyWithImpl<$Res>
+    extends _$CalculatorStatusCopyWithImpl<$Res, _$CalculatorIdleImpl>
+    implements _$$CalculatorIdleImplCopyWith<$Res> {
+  __$$CalculatorIdleImplCopyWithImpl(
+      _$CalculatorIdleImpl _value, $Res Function(_$CalculatorIdleImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$IdleImpl extends CalculatorIdle {
-  const _$IdleImpl() : super._();
+class _$CalculatorIdleImpl extends CalculatorIdle {
+  const _$CalculatorIdleImpl() : super._();
 
   @override
   String toString() {
@@ -967,7 +968,7 @@ class _$IdleImpl extends CalculatorIdle {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$IdleImpl);
+        (other.runtimeType == runtimeType && other is _$CalculatorIdleImpl);
   }
 
   @override
@@ -1049,30 +1050,30 @@ class _$IdleImpl extends CalculatorIdle {
 }
 
 abstract class CalculatorIdle extends CalculatorStatus {
-  const factory CalculatorIdle() = _$IdleImpl;
+  const factory CalculatorIdle() = _$CalculatorIdleImpl;
   const CalculatorIdle._() : super._();
 }
 
 /// @nodoc
-abstract class _$$InputtingImplCopyWith<$Res> {
-  factory _$$InputtingImplCopyWith(
-          _$InputtingImpl value, $Res Function(_$InputtingImpl) then) =
-      __$$InputtingImplCopyWithImpl<$Res>;
+abstract class _$$CalculatorInputtingImplCopyWith<$Res> {
+  factory _$$CalculatorInputtingImplCopyWith(_$CalculatorInputtingImpl value,
+          $Res Function(_$CalculatorInputtingImpl) then) =
+      __$$CalculatorInputtingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InputtingImplCopyWithImpl<$Res>
-    extends _$CalculatorStatusCopyWithImpl<$Res, _$InputtingImpl>
-    implements _$$InputtingImplCopyWith<$Res> {
-  __$$InputtingImplCopyWithImpl(
-      _$InputtingImpl _value, $Res Function(_$InputtingImpl) _then)
+class __$$CalculatorInputtingImplCopyWithImpl<$Res>
+    extends _$CalculatorStatusCopyWithImpl<$Res, _$CalculatorInputtingImpl>
+    implements _$$CalculatorInputtingImplCopyWith<$Res> {
+  __$$CalculatorInputtingImplCopyWithImpl(_$CalculatorInputtingImpl _value,
+      $Res Function(_$CalculatorInputtingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InputtingImpl extends CalculatorInputting {
-  const _$InputtingImpl() : super._();
+class _$CalculatorInputtingImpl extends CalculatorInputting {
+  const _$CalculatorInputtingImpl() : super._();
 
   @override
   String toString() {
@@ -1082,7 +1083,8 @@ class _$InputtingImpl extends CalculatorInputting {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InputtingImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$CalculatorInputtingImpl);
   }
 
   @override
@@ -1164,25 +1166,25 @@ class _$InputtingImpl extends CalculatorInputting {
 }
 
 abstract class CalculatorInputting extends CalculatorStatus {
-  const factory CalculatorInputting() = _$InputtingImpl;
+  const factory CalculatorInputting() = _$CalculatorInputtingImpl;
   const CalculatorInputting._() : super._();
 }
 
 /// @nodoc
-abstract class _$$CalculatedImplCopyWith<$Res> {
-  factory _$$CalculatedImplCopyWith(
-          _$CalculatedImpl value, $Res Function(_$CalculatedImpl) then) =
-      __$$CalculatedImplCopyWithImpl<$Res>;
+abstract class _$$CalculatorCalculatedImplCopyWith<$Res> {
+  factory _$$CalculatorCalculatedImplCopyWith(_$CalculatorCalculatedImpl value,
+          $Res Function(_$CalculatorCalculatedImpl) then) =
+      __$$CalculatorCalculatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double result});
 }
 
 /// @nodoc
-class __$$CalculatedImplCopyWithImpl<$Res>
-    extends _$CalculatorStatusCopyWithImpl<$Res, _$CalculatedImpl>
-    implements _$$CalculatedImplCopyWith<$Res> {
-  __$$CalculatedImplCopyWithImpl(
-      _$CalculatedImpl _value, $Res Function(_$CalculatedImpl) _then)
+class __$$CalculatorCalculatedImplCopyWithImpl<$Res>
+    extends _$CalculatorStatusCopyWithImpl<$Res, _$CalculatorCalculatedImpl>
+    implements _$$CalculatorCalculatedImplCopyWith<$Res> {
+  __$$CalculatorCalculatedImplCopyWithImpl(_$CalculatorCalculatedImpl _value,
+      $Res Function(_$CalculatorCalculatedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1190,7 +1192,7 @@ class __$$CalculatedImplCopyWithImpl<$Res>
   $Res call({
     Object? result = null,
   }) {
-    return _then(_$CalculatedImpl(
+    return _then(_$CalculatorCalculatedImpl(
       result: null == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
@@ -1201,8 +1203,8 @@ class __$$CalculatedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CalculatedImpl extends CalculatorCalculated {
-  const _$CalculatedImpl({required this.result}) : super._();
+class _$CalculatorCalculatedImpl extends CalculatorCalculated {
+  const _$CalculatorCalculatedImpl({required this.result}) : super._();
 
   @override
   final double result;
@@ -1216,7 +1218,7 @@ class _$CalculatedImpl extends CalculatorCalculated {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CalculatedImpl &&
+            other is _$CalculatorCalculatedImpl &&
             (identical(other.result, result) || other.result == result));
   }
 
@@ -1226,8 +1228,10 @@ class _$CalculatedImpl extends CalculatorCalculated {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CalculatedImplCopyWith<_$CalculatedImpl> get copyWith =>
-      __$$CalculatedImplCopyWithImpl<_$CalculatedImpl>(this, _$identity);
+  _$$CalculatorCalculatedImplCopyWith<_$CalculatorCalculatedImpl>
+      get copyWith =>
+          __$$CalculatorCalculatedImplCopyWithImpl<_$CalculatorCalculatedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1306,30 +1310,30 @@ class _$CalculatedImpl extends CalculatorCalculated {
 
 abstract class CalculatorCalculated extends CalculatorStatus {
   const factory CalculatorCalculated({required final double result}) =
-      _$CalculatedImpl;
+      _$CalculatorCalculatedImpl;
   const CalculatorCalculated._() : super._();
 
   double get result;
   @JsonKey(ignore: true)
-  _$$CalculatedImplCopyWith<_$CalculatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CalculatorCalculatedImplCopyWith<_$CalculatorCalculatedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$CalculatorErrorImplCopyWith<$Res> {
+  factory _$$CalculatorErrorImplCopyWith(_$CalculatorErrorImpl value,
+          $Res Function(_$CalculatorErrorImpl) then) =
+      __$$CalculatorErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$CalculatorStatusCopyWithImpl<$Res, _$ErrorImpl>
-    implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+class __$$CalculatorErrorImplCopyWithImpl<$Res>
+    extends _$CalculatorStatusCopyWithImpl<$Res, _$CalculatorErrorImpl>
+    implements _$$CalculatorErrorImplCopyWith<$Res> {
+  __$$CalculatorErrorImplCopyWithImpl(
+      _$CalculatorErrorImpl _value, $Res Function(_$CalculatorErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1337,7 +1341,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$ErrorImpl(
+    return _then(_$CalculatorErrorImpl(
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -1348,8 +1352,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl extends CalculatorError {
-  const _$ErrorImpl({required this.message}) : super._();
+class _$CalculatorErrorImpl extends CalculatorError {
+  const _$CalculatorErrorImpl({required this.message}) : super._();
 
   @override
   final String message;
@@ -1363,7 +1367,7 @@ class _$ErrorImpl extends CalculatorError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorImpl &&
+            other is _$CalculatorErrorImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -1373,8 +1377,9 @@ class _$ErrorImpl extends CalculatorError {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$CalculatorErrorImplCopyWith<_$CalculatorErrorImpl> get copyWith =>
+      __$$CalculatorErrorImplCopyWithImpl<_$CalculatorErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1452,11 +1457,12 @@ class _$ErrorImpl extends CalculatorError {
 }
 
 abstract class CalculatorError extends CalculatorStatus {
-  const factory CalculatorError({required final String message}) = _$ErrorImpl;
+  const factory CalculatorError({required final String message}) =
+      _$CalculatorErrorImpl;
   const CalculatorError._() : super._();
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+  _$$CalculatorErrorImplCopyWith<_$CalculatorErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

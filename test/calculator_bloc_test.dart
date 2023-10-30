@@ -26,7 +26,7 @@ void main() async {
         () {
           expect(
             calculatorBloc.state,
-            CalculatorState.empty,
+            CalculatorState.empty(),
           );
         },
       );
@@ -79,7 +79,7 @@ void main() async {
         expect: () => [
           const CalculatorState(
             status: CalculatorStatus.error(
-              message: ErrorMessages.noOperationSelected,
+              message: ErrorMessage.noOperationSelected,
             ),
             selectedOperation: null,
             currentOperandPosition: null,
@@ -114,7 +114,7 @@ void main() async {
           ),
           const CalculatorState(
             status: CalculatorStatus.error(
-              message: ErrorMessages.wrongNumberOfOperands,
+              message: ErrorMessage.wrongNumberOfOperands,
             ),
             selectedOperation: Operation.addition,
             currentOperandPosition: 1,
@@ -165,7 +165,7 @@ void main() async {
           ),
           const CalculatorState(
             status: CalculatorStatus.error(
-              message: ErrorMessages.wrongNumberOfOperands,
+              message: ErrorMessage.wrongNumberOfOperands,
             ),
             selectedOperation: Operation.addition,
             currentOperandPosition: 3,
@@ -374,7 +374,7 @@ void main() async {
           ),
           const CalculatorState(
             status: CalculatorStatus.error(
-              message: ErrorMessages.cantFindSqrtOfNeg,
+              message: ErrorMessage.cantFindSqrtOfNeg,
             ),
             selectedOperation: Operation.squareRoot,
             currentOperandPosition: 1,
@@ -417,7 +417,7 @@ void main() async {
           ),
           const CalculatorState(
             status: CalculatorStatus.error(
-              message: ErrorMessages.cantDivideByZero,
+              message: ErrorMessage.cantDivideByZero,
             ),
             selectedOperation: Operation.division,
             currentOperandPosition: 2,

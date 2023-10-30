@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:math' as math;
 
 import 'package:radiosphere_calculator_challenge/core/consts/error_messages.dart';
 import 'package:radiosphere_calculator_challenge/core/exceptions/calculation_exception.dart';
@@ -13,7 +13,7 @@ class CalculatorRepositoryImpl implements CalculatorRepository {
   }) {
     if (calculatorInput.operands.length !=
         calculatorInput.operation.operandsCount) {
-      throw CalculationException(ErrorMessages.wrongNumberOfOperands);
+      throw CalculationException(ErrorMessage.wrongNumberOfOperands);
     }
     switch (calculatorInput.operation) {
       case Operation.addition:
@@ -43,15 +43,15 @@ class CalculatorRepositoryImpl implements CalculatorRepository {
 
   double _calculateDivision(CalculatorInput input) {
     if (input.operands[1] == 0) {
-      throw CalculationException(ErrorMessages.cantDivideByZero);
+      throw CalculationException(ErrorMessage.cantDivideByZero);
     }
     return input.operands[0] / input.operands[1];
   }
 
   double _calculateSquareRoot(CalculatorInput input) {
     if (input.operands[0].isNegative) {
-      throw CalculationException(ErrorMessages.cantFindSqrtOfNeg);
+      throw CalculationException(ErrorMessage.cantFindSqrtOfNeg);
     }
-    return sqrt(input.operands[0]);
+    return math.sqrt(input.operands[0]);
   }
 }

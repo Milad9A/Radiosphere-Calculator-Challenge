@@ -1,4 +1,4 @@
-abstract class ErrorMessages {
+abstract class ErrorMessage {
   static const wrongNumberOfOperands = 'Wrong number of operands!';
   static const cantDivideByZero = "Can't divide by Zero!";
   static const cantFindSqrtOfNeg =

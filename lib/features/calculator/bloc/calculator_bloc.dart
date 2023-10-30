@@ -12,7 +12,7 @@ part 'calculator_bloc.freezed.dart';
 class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
   CalculatorBloc({required CalculatorRepository repository})
       : _repository = repository,
-        super(CalculatorState.empty) {
+        super(CalculatorState.empty()) {
     on<CalculatorEvent>((events, emit) {
       events.map(
         operationSelected: (OperationSelected event) =>
@@ -44,7 +44,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     OperandEntered event,
     Emitter<CalculatorState> emit,
   ) {
-    return emit(state.copyWith(
+    emit(state.copyWith(
       status: const CalculatorStatus.inputting(),
       currentOperandPosition: event.operandPosition + 1,
       operands: _buildOperandsList(
@@ -64,7 +64,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         return emit(
           state.copyWith(
             status: const CalculatorStatus.error(
-              message: ErrorMessages.noOperationSelected,
+              message: ErrorMessage.noOperationSelected,
             ),
           ),
         );
@@ -77,11 +77,11 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         ),
       );
 
-      return emit(
+      emit(
         state.copyWith(status: CalculatorStatus.calculated(result: result)),
       );
     } catch (e) {
-      return emit(
+      emit(
         state.copyWith(status: CalculatorStatus.error(message: e.toString())),
       );
     }
@@ -91,7 +91,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     ProcessRestarted event,
     Emitter<CalculatorState> emit,
   ) {
-    return emit(state.copyWith(
+    emit(state.copyWith(
       status: const CalculatorStatus.idle(),
       selectedOperation: null,
       currentOperandPosition: null,

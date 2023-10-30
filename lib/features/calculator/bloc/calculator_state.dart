@@ -11,12 +11,12 @@ class CalculatorState with _$CalculatorState {
     required List<double> operands,
   }) = _CalculatorState;
 
-  static const empty = CalculatorState(
-    status: CalculatorStatus.idle(),
-    selectedOperation: null,
-    currentOperandPosition: null,
-    operands: [],
-  );
+  factory CalculatorState.empty() => const CalculatorState(
+        status: CalculatorStatus.idle(),
+        selectedOperation: null,
+        currentOperandPosition: null,
+        operands: [],
+      );
 
   bool get canCalculate {
     if (selectedOperation == null) return false;
